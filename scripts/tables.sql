@@ -70,3 +70,9 @@ CREATE TABLE `digital_menu`.`user_token` (
   `expired` tinyint DEFAULT '0',
   PRIMARY KEY (`email`,`token`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+SET character_set_client = utf8;
+SET character_set_connection = utf8;
+SET character_set_results = utf8;
+SET collation_connection = utf8_unicode_ci;
+SET GLOBAL max_allowed_packet = 1024 * 1024 * 256;
