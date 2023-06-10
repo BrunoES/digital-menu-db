@@ -12,7 +12,7 @@ VIEW `digital_menu`.`v_company_user` AS
         `user_empresa`.`blocked` AS `user_blocked`,
         `company`.`logo_url` AS `logo_url`
     FROM
-        (`company`
-        JOIN `user_empresa`)
+        (`digital_menu`.`company`
+        JOIN `digital_menu`.`user_empresa`)
     WHERE
-        (`company`.`id` = `user_empresa`.`id_company`)
+        (`company`.`id` = `user_empresa`.`id_company`);

@@ -15,8 +15,8 @@ VIEW `digital_menu`.`v_historico_pedidos` AS
         `pedidos`.`table_number` AS `table_number`,
         `pedidos`.`checked` AS `checked`
     FROM
-        (`clientes`
-        JOIN `pedidos`)
+        (`digital_menu`.`clientes`
+        JOIN `digital_menu`.`pedidos`)
     WHERE
         (`pedidos`.`id_customer` = `clientes`.`id`)
-    ORDER BY `pedidos`.`date_hour` DESC
+    ORDER BY `pedidos`.`date_hour` DESC;

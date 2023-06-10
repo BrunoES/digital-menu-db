@@ -13,7 +13,7 @@ VIEW `digital_menu`.`v_pedidos_company` AS
         `pedidos`.`date_hour` AS `date_hour`,
         `pedidos`.`checked` AS `checked`
     FROM
-        (`company`
-        JOIN `pedidos`)
+        (`digital_menu`.`company`
+        JOIN `digital_menu`.`pedidos`)
     WHERE
-        (`company`.`id` = `pedidos`.`id_company`)
+        (`company`.`id` = `pedidos`.`id_company`);

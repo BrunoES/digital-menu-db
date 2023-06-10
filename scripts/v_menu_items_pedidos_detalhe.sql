@@ -13,10 +13,10 @@ VIEW `digital_menu`.`v_menu_items_pedidos_detalhe` AS
         `items`.`quantity` AS `quantity`,
         `pedido`.`obs` AS `obs`
     FROM
-        ((`menu_items_pedidos` `items`
-        JOIN `menu_items` `menu`)
-        JOIN `pedidos` `pedido`)
+        ((`digital_menu`.`menu_items_pedidos` `items`
+        JOIN `digital_menu`.`menu_items` `menu`)
+        JOIN `digital_menu`.`pedidos` `pedido`)
     WHERE
         ((`pedido`.`id` = `items`.`id_pedido`)
             AND (`items`.`id_item` = `menu`.`id`))
-    ORDER BY `pedido`.`date_hour` DESC
+    ORDER BY `pedido`.`date_hour` DESC;
