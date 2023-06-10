@@ -76,3 +76,4 @@ SET character_set_connection = utf8;
 SET character_set_results = utf8;
 SET collation_connection = utf8_unicode_ci;
 SET GLOBAL max_allowed_packet = 1024 * 1024 * 256;
+SET GLOBAL wait_timeout = 28800;
